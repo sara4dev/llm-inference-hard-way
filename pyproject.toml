@@ -1,0 +1,15 @@
+[project]
+name = "llm-inference-hard-way"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "ipykernel>=7.1.0",
+    "jupyterlab>=4.5.2",
+    "numpy>=2.4.1",
+    "regex>=2026.1.14",
+    "requests>=2.32.5",
+    "torch>=2.9.1",
+    "tqdm>=4.67.1",
+]
