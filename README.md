@@ -233,8 +233,8 @@ llm-inference-hard-way/
 │       ├── vocab.json                # Token → ID mapping
 │       └── merges.txt                # BPE merge rules
 ├── step1_download_model.ipynb        # ✅ Download & explore
-├── step2_tokenizer.ipynb             # 🔜 BPE tokenization
-├── step3_embeddings.ipynb            # 🔜 Token + position embeddings
+├── step2_tokenizer.ipynb             # ✅ BPE tokenization
+├── step3_embeddings.ipynb            # ✅ Token + position embeddings
 ├── step4_attention.ipynb             # 🔜 Q, K, V and attention
 ├── step5_transformer_block.ipynb     # 🔜 Full transformer block
 ├── step6_forward_pass.ipynb          # 🔜 Complete forward pass
