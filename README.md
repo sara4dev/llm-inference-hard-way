@@ -59,10 +59,10 @@ Each step is a **Jupyter notebook** with explanations, visualizations, and runna
 
 ---
 
-### Step 4: Attention Mechanism Deep Dive 🎯
-> **Notebook:** `step4_attention.ipynb`
+### Step 4a: Attention Fundamentals 🎯
+> **Notebook:** `step4a_attention.ipynb`
 
-The heart of the transformer! We'll implement:
+The heart of the transformer! We'll implement scaled dot-product attention:
 
 ```
 Attention(Q, K, V) = softmax(QK^T / √d_k) × V
@@ -73,9 +73,22 @@ Attention(Q, K, V) = softmax(QK^T / √d_k) × V
 - **V (Value):** "What information do I provide?"
 
 **Key concepts:**
+- Q, K, V projections — like database queries
+- Softmax as load balancing
+- Scaling to prevent score explosion
+
+---
+
+### Step 4b: Multi-Head Attention & Causal Masking 🐉
+> **Notebook:** `step4b_attention.ipynb`
+
+Extend single-head to the full GPT-2 attention mechanism:
+
+**Key concepts:**
 - Multi-head attention: 12 heads × 64 dims = 768
 - Causal masking: Can't attend to future tokens
 - Attention patterns visualization
+- Complete `CausalSelfAttention` class
 
 ---
 
@@ -235,7 +248,8 @@ llm-inference-hard-way/
 ├── step1_download_model.ipynb        # ✅ Download & explore
 ├── step2_tokenizer.ipynb             # ✅ BPE tokenization
 ├── step3_embeddings.ipynb            # ✅ Token + position embeddings
-├── step4_attention.ipynb             # 🔜 Q, K, V and attention
+├── step4a_attention.ipynb            # ✅ Q, K, V and single-head attention
+├── step4b_attention.ipynb            # 🔜 Multi-head attention & causal masking
 ├── step5_transformer_block.ipynb     # 🔜 Full transformer block
 ├── step6_forward_pass.ipynb          # 🔜 Complete forward pass
 ├── step7_generation.ipynb            # 🔜 Autoregressive decoding
